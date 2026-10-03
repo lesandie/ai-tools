@@ -1,0 +1,7 @@
+interface:
+  display_name: "Calm Chapters"
+  short_description: "Explain complex work in calm chapters"
+  default_prompt: "Use $calm-chapters to explain this in calm, readable chapters."
+
+policy:
+  allow_implicit_invocation: false
