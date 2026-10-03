@@ -12,6 +12,9 @@ AI tools for agents: reusable skills today, with room for plugins later.
 Each skill is a self-contained directory with a `SKILL.md` file and any
 required metadata or resources.
 
+Agents modifying this repository must follow [`AGENTS.md`](AGENTS.md).
+`CLAUDE.md` points Claude to the same canonical guide.
+
 ## Local Codex setup
 
 Point Codex at the checked-out skills with symlinks:
