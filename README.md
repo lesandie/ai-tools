@@ -18,11 +18,12 @@ Point Codex at the checked-out skills with symlinks:
 
 ```text
 ~/.codex/skills/calm-chapters -> /path/to/ai-tools/skills/calm-chapters
-~/.codex/skills/technical-writting -> /path/to/ai-tools/skills/technical-writing
+~/.codex/skills/technical-writing -> /path/to/ai-tools/skills/technical-writing
 ```
 
-The local `technical-writting` path keeps its existing spelling for
-compatibility. The canonical repository folder is `technical-writing`.
+`calm-chapters` includes focus and presentation ideas inspired by
+[`i-have-adhd`](https://github.com/ayghri/i-have-adhd). It is self-contained and
+does not require that plugin.
 
 ## Future plugins
 

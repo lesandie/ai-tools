@@ -1,57 +1,70 @@
 ---
 name: technical-writing
 description: >-
-  Use when writing or revising any prose a person will read — chat replies to the
-  user, docs, READMEs, wiki pages, CLI --help text, error and log messages,
-  commit bodies, PR descriptions, release notes, code comments. Also use when
-  text reads as stiff, hedged, padded, corporate, or breezy, or when an error
-  message leaves the reader with nothing to do. Portable voice-and-tone rules
-  adapted from the Microsoft Writing Style Guide; carries no Microsoft-specific
-  terminology or UI conventions.
+  Draft or revise user-facing technical prose such as documentation, READMEs,
+  help text, error messages, release notes, PR descriptions, and code comments.
+  Also use when the user asks for plain, direct, concise, or actionable wording.
+  Do not invoke for routine conversation that does not involve writing or
+  revising prose.
 ---
 
 # Writing in Plain Voice
 
-Adapted from the voice-and-tone half of the Microsoft Writing Style Guide — the
-portable half. The terminology list, UI-element rules, and product conventions
-are deliberately left out.
+Adapted from the portable voice-and-tone principles in the Microsoft Writing
+Style Guide. Product-specific terminology and UI conventions are out of scope.
 
 Target voice: **warm, crisp, useful.** Warm is plain and direct, not chatty.
 Crisp is one idea per sentence. Useful means the reader can act on it.
 
-## The recipe
+## Preserve before improving
 
-Every sentence: **an actor, doing something, in the first clause.** The point
-leads; the qualification follows.
+Do not improve style by changing substance.
 
-1. **Second person, active voice.** "Set the token in your config" — not "The
-   token should be set."
-2. **First clause carries the point.** Reason, condition, and caveat go after.
+- Preserve facts, intent, constraints, examples, and required terminology.
+- Preserve the requested format and the established product or author voice.
+- Do not add certainty, causes, promises, or instructions unsupported by the
+  source.
+- Leave code, commands, identifiers, and quoted text unchanged unless the user
+  asks to edit them.
+
+## Core style
+
+1. **Lead with the point.** Put the answer, instruction, or finding in the
+   first useful sentence.
+2. **Prefer active voice with a clear subject.** Use second person for reader
+   actions: "Set the token in your config." Do not force second person into
+   explanations, logs, or reference material.
+3. **Put the point in the first clause.** Reason, condition, and caveat follow.
    "Scope the tag — the runner pool is shared across regions."
-3. **One idea per sentence.** Split compounds. If a sentence needs a second
-   comma to survive, it's two sentences.
-4. **Contractions are fine.** *don't*, *you're*, *it's*.
-5. **Verbs, not nominalizations.** "when you configure" over "during
+4. **Keep one main idea per sentence.** Split a sentence when its clauses make
+   the reader track separate claims.
+5. **Use verbs instead of nominalizations.** "when you configure" beats "during
    configuration."
-6. **Define a term the first time it appears.** Undefined jargon or an unexpanded
-   acronym is a defect, not a style preference.
-7. **Open on the substance.** The first sentence is the answer, the instruction,
-   or the finding.
-8. **Say what it does, not what it is.** Lead with the reader's action or
-   outcome, not the taxonomy.
+6. **Define unfamiliar terms on first use.** Keep established domain terms when
+   the audience knows them.
+7. **Use the shortest wording that keeps the reasoning.** Concise does not mean
+   clipped or incomplete.
+8. **Match the audience.** Contractions, humor, punctuation, and formality
+   follow the requested voice and the surrounding document.
 
-## Error, warning, and failure text
+## Match the format
 
-Three parts, in this order, in plain language:
+- **Instructions:** Use imperative steps and tell the reader how to verify the
+  result.
+- **Explanations:** Name the subject and preserve the reasoning, not only the
+  conclusion.
+- **User-facing errors:** State what happened, the cause when known, and what
+  the reader can do next. Never blame the reader or invent a cause.
+- **Diagnostic logs:** Record the event and useful context for diagnosis. Do
+  not address the reader or require an action when none exists.
+- **Commits, release notes, and comments:** Follow the project's established
+  convention before applying general style preferences.
 
-**what happened → why → what to do next**
+For a user-facing error, prefer:
 
-The reader is never the defect. State the condition, not their fault. Skip
-codes and internals unless the reader can act on them; if a code must appear,
-it goes last.
+**what happened → known cause → next action**
 
-- ✅ `That date is in the past. Pick a future date.`
-- ❌ `Invalid value entered (ERR_DATE_1042).`
+When the cause is unknown, replace it with the next diagnostic step.
 
 ## Quick reference
 
@@ -63,7 +76,7 @@ it goes last.
 | The file should be deleted by the user | Delete the file |
 | Utilize / leverage | Use |
 | Prior to / subsequent to | Before / after |
-| An error occurred | Couldn't reach the API — check your token |
+| An error occurred | Couldn't reach the API. Retry the request. |
 | We apologize for any inconvenience | *(cut)* |
 
 ## Common mistakes
@@ -72,17 +85,17 @@ it goes last.
   don't. Uncertainty gets stated once, plainly: "I'm not sure this holds when…"
 - **Padding the front.** "Great question! So, essentially, what's happening
   here is…" The answer starts at word one.
-- **Warm read as breezy.** No jokes, no exclamation marks, no hype. Warmth comes
-  from being direct and unpatronizing, not from enthusiasm.
+- **Warm read as breezy.** Warmth comes from being direct and unpatronizing,
+  not from filler or hype.
 - **Crisp read as clipped.** Short sentences, complete thoughts. Don't drop the
-  reasoning — put it in the second clause.
+  reasoning to save words.
 - **Passive voice hiding the actor.** "The config is read at startup" — by what?
-  Name it.
+  Name the actor when the actor matters.
 - **Long-sentence relapse in explanation.** Explaining something complex is
   exactly when clause-stacking creeps back in. Watch it there hardest.
 
 ## Scope note
 
-This governs *voice*, not structure or content. Depth, length, and what to
-include are set by the task and by other rules. Plain voice does not mean short
-answers — it means every sentence in a long answer earns its place.
+This governs voice and wording, not the task's required depth or structure.
+Plain voice does not mean short answers; it means every sentence earns its
+place.

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Technical Writing"
+  short_description: "Write clear, direct technical prose"
+  default_prompt: "Use $technical-writing to revise this text in a clear, direct voice."
+
+policy:
+  allow_implicit_invocation: true
