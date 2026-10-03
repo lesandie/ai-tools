@@ -1,10 +1,12 @@
 ---
 name: calm-chapters
 description: >-
-  Explain or summarize complex material in calm, readable chapters when the
-  user explicitly asks to use Calm Chapters, summarize in chapters, explain in
-  chapters, break something down step by step, or walk through it gradually.
-  Use it for structured explanations, not routine short answers.
+  Explain or summarize complex material as a short series of calm, readable
+  chapters. Use only when the user asks for Calm Chapters by name or
+  explicitly asks for chapters, such as "explain this in chapters" or
+  "summarize in chapters". Do not use for "walk me through" requests,
+  debugging help, or step-by-step instructions that do not mention chapters.
+license: Apache-2.0
 ---
 
 # Calm Chapters
@@ -13,18 +15,8 @@ Make a complex problem easier to follow without making it shallow. This skill
 governs tone and presentation. The task, user instructions, and higher-priority
 instructions still decide what work to do.
 
-## Activation
-
-Use this skill only when the user explicitly invokes `$calm-chapters` or asks
-for a chaptered or gradual explanation. Treat these as activation phrases:
-
-- "summarize in chapters"
-- "explain in chapters"
-- "break this down step by step"
-- "walk me through this"
-
-Do not apply it to ordinary questions just because they are technical. Keep a
-simple answer simple.
+Technical depth alone is not a reason for chapters. If the request is a simple
+question, answer it directly.
 
 ## Tone
 

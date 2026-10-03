@@ -2,10 +2,11 @@
 name: technical-writing
 description: >-
   Draft or revise user-facing technical prose such as documentation, READMEs,
-  help text, error messages, release notes, PR descriptions, and code comments.
-  Also use when the user asks for plain, direct, concise, or actionable wording.
-  Do not invoke for routine conversation that does not involve writing or
-  revising prose.
+  help text, error messages, commit messages, release notes, PR descriptions,
+  and code comments. Also use when the user asks for plain, direct, concise, or
+  actionable wording. Do not invoke for routine conversation that does not
+  involve writing or revising prose.
+license: Apache-2.0
 ---
 
 # Writing in Plain Voice
@@ -67,6 +68,10 @@ For a user-facing error, prefer:
 When the cause is unknown, replace it with the next diagnostic step.
 
 ## Quick reference
+
+Each rewrite assumes the source already states the facts it uses. If the
+source gives no cause or condition, keep the uncertainty instead of inventing
+one to make the sentence crisper.
 
 | Instead of | Write |
 |---|---|
