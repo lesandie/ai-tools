@@ -62,7 +62,13 @@ answer, give the answer directly; do not manufacture chapters.
 5. Use one small, concrete example when it clarifies the idea. Build it from
    the names, values, errors, code, or scenario already supplied by the user.
    Label an invented illustration as an example; never present it as a fact.
-6. End every chapter with a one- or two-sentence **Takeaway**. When action is
+6. Add one simple diagram when a picture beats prose: flow or sequence,
+   architecture or component relationships, state or lifecycle, timeline.
+   Prefer a short ASCII diagram in a plain `text` fence, which reads in any
+   target; reach for Mermaid only when the output will render it. Keep it
+   under roughly ten nodes, place it after the explanation and before the
+   Takeaway, and skip it when the prose already makes the shape obvious.
+7. End every chapter with a one- or two-sentence **Takeaway**. When action is
    needed, make it a specific next step.
 
 Show no more than five chapters in one response. If the material needs more,
@@ -90,5 +96,6 @@ refreshing the stored token does not change that existing header.
 
 Check that the first sentence contains substance, every chapter earns its
 place, lists keep a small visible working set, examples use the available
-context, and the last line gives a clear takeaway or next action rather than a
-generic invitation to continue.
+context, any diagram earns its place and still reads as plain text, and the
+last line gives a clear takeaway or next action rather than a generic
+invitation to continue.
